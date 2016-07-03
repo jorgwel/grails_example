@@ -13,23 +13,29 @@
 <h1>Sum Calculator</h1>
 <h4>Click on Sum to add a new sum and it's result</h3>
       
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Number 1</th>
+        <th>Number 2</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+    <tbody id="sums">
+    </tbody>
+  </table>
 
-  <div class="row">
-    <div class="col-sm-4">Number 1</div>
-    <div class="col-sm-4">Number 2</div>
-    <div class="col-sm-4">Result</div>
-  </div>
 
 
-  <div id="calculatedSums"></div>
 
-  <div class="row">
+  <div  class="row">
     <div class="col-sm-4"><input class="form-control" id="number1" type="text" placeHolder="Write a number"></div>
     <div class="col-sm-4"><input class="form-control" id="number2" type="text" placeHolder="Write a number"></div>
     <div class="col-sm-4"><button id="sumButton" type="button" class="btn btn-primary">Sum</button></div>
+    <!--<div class="col-sm-4"><button id="sumButton" type="button" class="btn btn-primary">Reset</button></div>-->
   </div>
 
-  <div id="templateTmpContainer" style="display: none">
+  <div id="rowTmp" style="display: none">
   </div>
 
 
