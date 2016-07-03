@@ -1,0 +1,42 @@
+@startuml
+
+package View <<Cloud>> {
+       package HTML {}
+       package JQuery {}
+       package Bootstrap {}
+}
+
+package Server <<Cloud>> {
+
+        namespace domains {
+              class Sum {
+                    Integer quantity1
+                    Integer quantity2
+                    Integer result
+              }
+        }
+        
+        namespace services {
+                  class SumCalculatorService {
+                        + add(quantity1 : Integer, quantity2 : Integer) throws MissingQuantityException
+                        + bringSums()
+                  }
+        }
+
+
+        namespace controllers {
+                  class SumCalculatorController {
+                        [POST] saveSum()
+                        [GET] getSums()
+                  }
+        }
+
+
+'        controllers -right--> services
+'        services ---> domains
+
+}
+
+View ---> Server
+
+@enduml

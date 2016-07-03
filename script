@@ -1,0 +1,17 @@
+Projecto de ejemplo:
+
+- Toda la creación se hará desde consola (a pesar de también se puede hacer todo con el IDE)
+- JQuery, Grails, Ajax, REST
+- Mapa mental al final
+
+
+- Describir la aplicación en general
+- Describir la estructura de el proyecto de la vista
+- Describir mockups de como debería de quedar
+- Describir Grails
+- Crear aplicación en Grails
+- Iniciar aplicación en Grails
+- Crear acceso a través de un controller
+- Crear lógica de negocio en un servicio
+- Mostrar Hola Mundo desde la vista
+
