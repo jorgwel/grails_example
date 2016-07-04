@@ -9,6 +9,7 @@ function SumCalculator () {
 		var newRow = this.buildRow(n1, n2, sum);
 		console.log("newRow: " + newRow);
 		this.addRow(newRow);
+		this.resetValues();
 	};
 
 	this.constructor.prototype.buildRow = function(n1, n2, result) {
@@ -36,19 +37,32 @@ function SumCalculator () {
 		);
 	}
 
+	this.constructor.prototype.initResetBehaviour = function(){
+		$("#resetButton").on("click", function(event){
+										event.stopPropagation();		
+										outerThis.reset();
+									}
+		);
+	}
+
 
 	this.constructor.prototype.resetValues = function(){
 		$("#number1").val("");
 		$("#number2").val("");
 	}
 
+	this.constructor.prototype.emptyTheSums = function(){
+		$("#sums").html("");
+	}
+
 	this.constructor.prototype.reset = function(){
 		this.resetValues();
-		$("#sums").html("");
+		this.emptyTheSums();
 	}
 
 	this.constructor.prototype.init = function(){
 		this.initSumBehaviour();
+		this.initResetBehaviour();
 		this.initTemplates();
 	}
 

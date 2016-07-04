@@ -1,7 +1,10 @@
 @startuml
 
 package View <<Cloud>> {
-       package HTML {}
+       package HTML {
+               package Templates {
+               }
+       }
        package JQuery {}
        package Bootstrap {}
 }
@@ -18,7 +21,7 @@ package Server <<Cloud>> {
         
         namespace services {
                   class SumCalculatorService {
-                        + add(quantity1 : Integer, quantity2 : Integer) throws MissingQuantityException
+                        + add(quantity1 : Integer, quantity2 : Integer) throws NotANumberException, MissingQuantityException
                         + bringSums()
                   }
         }
@@ -31,9 +34,6 @@ package Server <<Cloud>> {
                   }
         }
 
-
-'        controllers -right--> services
-'        services ---> domains
 
 }
 
