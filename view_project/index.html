@@ -27,13 +27,15 @@
 
 
   <div  class="row">
-    <div class="col-sm-4"><input class="form-control" id="number1" type="text" placeHolder="Write a number"></div>
-    <div class="col-sm-4"><input class="form-control" id="number2" type="text" placeHolder="Write a number"></div>
+    <div class="col-sm-4" id="number1Container"><input class="form-control" id="number1" type="text" placeHolder="Write a number"></div>
+    <div class="col-sm-4" id="number2Container"><input class="form-control" id="number2" type="text" placeHolder="Write a number"></div>
     <div class="col-sm-1"><button id="sumButton" type="button" class="btn btn-primary">Sum</button></div>
     <div class="col-sm-1"><button id="resetButton" type="button" class="btn btn-warning">Reset</button></div>
   </div>
 
   <div id="rowTmp" style="display: none">
+  </div>
+  <div id="errorTmp" style="display: none">
   </div>
 
 
@@ -41,7 +43,9 @@
   <script src="js/bootstrap.min.js"></script>
   <!--Taken from https://github.com/codepb/jquery-template-->
   <script src="js/jquery.loadTemplate-1.5.7.min.js"></script>    
-  <script src="js/sumCalculator.js"></script>
+  <!--Taken from http://ned.im/noty/#/about-->
+  <script src="js/jquery.noty.packaged.min.js"></script>
+  <script src="js/app/sumCalculator.js"></script>
 
 </body>
 </html>                                		
