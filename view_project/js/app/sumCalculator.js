@@ -50,7 +50,7 @@ function SumCalculator () {
 		if(!$.isNumeric(number2))
 			errorCollection.push(this.createError(validationType, message, '#number2Container'));
 
-		if(errorCollection)
+		if(errorCollection && errorCollection.length > 0)
 			throw errorCollection;
 		
 
@@ -68,7 +68,7 @@ function SumCalculator () {
 		if(!number2)
 			errorCollection.push(this.createError(validationType, missingValueMessage, '#number2Container'));
 			
-		if(errorCollection)
+		if(errorCollection && errorCollection.length > 0)
 			throw errorCollection;
 
 	};
@@ -92,6 +92,7 @@ function SumCalculator () {
 			layout: 'topRight',
 			closeWith: ['click'],
 			type: 'warning',
+			timeout: 2000,
 			animation: {
 				open: {height: 'toggle'}, // jQuery animate function property object
 				close: {height: 'toggle'}, // jQuery animate function property object
