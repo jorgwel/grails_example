@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Basic Bootstrap Template</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- Optional Bootstrap theme -->
-<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <meta charset="utf-8">
+    <title>Basic Bootstrap Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 </head>
 <body>
 
 <h1>Sum Calculator</h1>
 <h4>Click on Sum to add a new sum and it's result</h3>
-      
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Number 1</th>
-        <th>Number 2</th>
-        <th>Result</th>
-      </tr>
-    </thead>
-    <tbody id="sums">
-    </tbody>
-  </table>
+    <div class="container" role="main">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Number 1</th>
+                <th>Number 2</th>
+                <th>Result</th>
+            </tr>
+            </thead>
+            <tbody id="sums">
+            </tbody>
+        </table>
 
 
-  <div  class="row">
-    <div class="col-sm-4" id="number1Container"><input class="form-control" id="number1" type="text" placeHolder="Write a number"></div>
-    <div class="col-sm-4" id="number2Container"><input class="form-control" id="number2" type="text" placeHolder="Write a number"></div>
-    <div class="col-sm-1"><button id="sumButton" type="button" class="btn btn-primary">Sum</button></div>
-    <div class="col-sm-1"><button id="resetButton" type="button" class="btn btn-warning">Reset</button></div>
-  </div>
+        <div class="row">
+            <div class="col-sm-4" id="number1Container"><input class="form-control" id="number1" type="text"
+                                                               placeHolder="Write a number"></div>
+            <div class="col-sm-4" id="number2Container"><input class="form-control" id="number2" type="text"
+                                                               placeHolder="Write a number"></div>
+            <div class="col-sm-1">
+                <button id="sumButton" type="button" class="btn btn-primary">Sum</button>
+            </div>
+            <div class="col-sm-1">
+                <button id="resetButton" type="button" class="btn btn-warning">Reset</button>
+            </div>
+        </div>
+    </div>
+    <div id="rowTmp" style="display: none">
+    </div>
+    <div id="errorTmp" style="display: none">
+    </div>
 
-  <div id="rowTmp" style="display: none">
-  </div>
-  <div id="errorTmp" style="display: none">
-  </div>
 
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <!--Taken from https://github.com/codepb/jquery-template-->
-  <script src="js/jquery.loadTemplate-1.5.7.min.js"></script>    
-  <!--Taken from http://ned.im/noty/#/about-->
-  <script src="js/jquery.noty.packaged.min.js"></script>
-  <script src="js/app/errorValidator.js"></script>
-  <script src="js/app/sumCalculator.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--Taken from https://github.com/codepb/jquery-template-->
+    <script src="js/jquery.loadTemplate-1.5.7.min.js"></script>
+    <!--Taken from http://ned.im/noty/#/about-->
+    <script src="js/jquery.noty.packaged.min.js"></script>
+    <script src="js/app/errorValidator.js"></script>
+    <script src="js/app/sumCalculator.js"></script>
 
 </body>
 </html>                                		
